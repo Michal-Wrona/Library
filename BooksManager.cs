@@ -11,8 +11,21 @@ namespace Bibkioteka1
 
         public BooksManager()
         {
-            _books1 = new List<Books1>(); // dlaczego to w konstruktorze ?? 
+           _books1 = new List<Books1>(); // dlaczego to w konstruktorze ?? 
+
+
         }
+        //new BooksManager().Init().Add(new Books1())
+
+        //public void Init()
+        //{
+        //    _books1 = new List<Books1>();
+        //}
+
+        //public void Add(Books1 book)
+        //{
+        //    _books1.Add(book);
+        //}
 
         public IEnumerable<Books1> GetAllBooks() // zwraca wszystkie obiekty z listy, ale jak? co daje to IEnumerable?
         {
@@ -36,5 +49,27 @@ namespace Bibkioteka1
             _books1.Add(book);
             return book;
         }
+        //public Books1 GetBook(string bookNazwa) // tu nie wiem jak przekonwertować bookNazwa na obiekt book
+        //{
+        //    Books1 book;
+        //    foreach (Books1 item in _books1)
+        //    {
+        //        if(item.nazwa == bookNazwa)
+        //        {
+        //            book = bookNazwa;
+        //            break;
+        //        }
+        //    }
+        //    return book;
+        //}
+        public bool GetBook1 (string nameBook) // zwraca true jeśli nazwa książki jest na liście _books1
+        {
+            foreach (Books1 nazwa in _books1)
+            {
+                if (nazwa.nazwa == nameBook) break;
+            }
+            return true;
+        }
+
     }
 }
