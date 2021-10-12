@@ -11,7 +11,7 @@ namespace Bibkioteka1
 
         public BooksManager()
         {
-           _books1 = new List<Books1>(); // dlaczego to w konstruktorze ?? 
+            _books1 = new List<Books1>(); // dlaczego to w konstruktorze ?? 
 
 
         }
@@ -62,13 +62,24 @@ namespace Bibkioteka1
         //    }
         //    return book;
         //}
-        public bool GetBook1 (string nameBook) // zwraca true jeśli nazwa książki jest na liście _books1
+        public string GetBook1(string nameBook) // zwraca true jeśli nazwa książki jest na liście _books1
         {
+            string a = "jest";
+            string b = "brak";
             foreach (Books1 nazwa in _books1)
             {
-                if (nazwa.nazwa == nameBook) break;
+                if (nazwa.nazwa == nameBook)
+                {
+                    return a;
+                }
+
             }
-            return true;
+            return b;
+        }
+
+        public string CheckBook (string nazwa)
+        {
+
         }
 
     }

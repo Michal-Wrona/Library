@@ -6,7 +6,7 @@ namespace Bibkioteka1
 {
     class Books1
     {
-        public string autor;
+        public string autor { get; } // czy tutaj get ma jakieś logiczne zastosowanie ??
         public string nazwa;
         public int id;
 
