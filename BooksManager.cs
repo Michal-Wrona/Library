@@ -68,7 +68,8 @@ namespace Bibkioteka1
             {
                 if (nazwa.nazwa == nameBook) break;
             }
-            return true;
+            string a = "jest";
+            return true; // jak przekonwertować true na string a ??
         }
 
     }
