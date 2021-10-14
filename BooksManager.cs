@@ -77,10 +77,5 @@ namespace Bibkioteka1
             return b;
         }
 
-        public string CheckBook (string nazwa)
-        {
-
-        }
-
     }
 }

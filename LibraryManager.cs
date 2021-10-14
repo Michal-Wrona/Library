@@ -7,12 +7,14 @@ namespace Bibkioteka1
 {
     class LibraryManager
     {
-        private BooksManager booksManager;
+        private BooksManager booksManager; // dlaczego tutaj deklaruje się klasę ? czy tylko dlatego by można odwoływać się do jej metod ?
         private Printer printer;
+        private PeopleManager peopleManager;
 
         public LibraryManager()
         {
             booksManager = new BooksManager();
+            peopleManager = new PeopleManager();
             printer = new Printer();
         }
 
@@ -22,7 +24,10 @@ namespace Bibkioteka1
             Console.WriteLine("1 - Sprawdź dostępność książki");
             Console.WriteLine("2 - Wyświetl liste książek");
             Console.WriteLine("3 - Dodaj nową książkę");
-            Console.WriteLine("4 - Zakończ");
+            Console.WriteLine("4 - Zobacz wypożyczenia");
+            Console.WriteLine("5 - Dodaj nowego użytkownika");
+            Console.WriteLine("6 - Sprawdź listę wszystkich użytkowników");
+            Console.WriteLine("8 - Zakończ program");
         }
 
         public void Run() // ta metoda udostępnia Menu- public
@@ -33,7 +38,7 @@ namespace Bibkioteka1
                 MenuLibrary();
                 choice = SelectionAction();
 
-                switch (choice)
+                switch (choice) // dlaczego po naciśnięciu enter przełącza na visuala i wskazuje wiersz 86 ? 
                 {
                     case 1:
                         Console.Clear();
@@ -54,9 +59,24 @@ namespace Bibkioteka1
                         AddBook();
                         Console.ReadKey();
                         break;
+                    case 5:
+                        Console.Clear();
+                        Console.WriteLine("Dodaj nowego użytkownika");
+                        AddUsser();
+                        Console.ReadKey();
+                        break;
+                    case 6:
+                        Console.Clear();
+                        Console.WriteLine("Wyświetl wszystkich użytkowników");
+                        ListOfPeople();
+                        Console.ReadKey();
+                        break;
+                    defult:
+                        Console.WriteLine("nieznane polecenie");
+                        break;
                 }
 
-            } while (choice != 4);
+            } while (choice != 8);
         }
 
         private int SelectionAction()
@@ -95,6 +115,27 @@ namespace Bibkioteka1
 
             //var check = _books1.Select(x => x.nazwa == a);
             Console.WriteLine(booksManager.GetBook1(a));
+        }
+
+        private void AddUsser()
+        {
+            Console.WriteLine("Imię: ");
+            string firstName = Console.ReadLine();
+            Console.WriteLine("Nazwisko: ");
+            string lastName = Console.ReadLine();
+            Console.WriteLine("Podaj nr pesel: ");
+            int pesel = int.Parse(Console.ReadLine());
+            People people = peopleManager.CreateNewPeople(firstName, lastName, pesel); // co tu jest nie tak ?
+        }
+
+        private void ListOfPeople()
+        {
+            foreach (People usser in peopleManager.GetAllPeople()) // to dla mnie niezbyt jasne
+            {
+                Console.WriteLine(usser.id);
+                Console.WriteLine(usser.firstName + " " + usser.lastName);
+                Console.WriteLine();
+            }
         }
     }
 
