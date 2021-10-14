@@ -59,6 +59,10 @@ namespace Bibkioteka1
                         AddBook();
                         Console.ReadKey();
                         break;
+                    case 4:
+                        Console.Clear();
+                        Console.WriteLine("Wypożyczenia: ");
+                        break;
                     case 5:
                         Console.Clear();
                         Console.WriteLine("Dodaj nowego użytkownika");
@@ -71,7 +75,7 @@ namespace Bibkioteka1
                         ListOfPeople();
                         Console.ReadKey();
                         break;
-                    defult:
+                    default:
                         Console.WriteLine("nieznane polecenie");
                         break;
                 }

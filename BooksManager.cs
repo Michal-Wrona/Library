@@ -7,7 +7,7 @@ namespace Bibkioteka1
 {
     class BooksManager
     {
-        private IList<Books1> _books1; // czy tutaj tworzymy nową listę, ale jeszcze bez obiektów? Dlaczego IList? nie List?
+        protected IList<Books1> _books1; // czy tutaj tworzymy nową listę, ale jeszcze bez obiektów? Dlaczego IList? nie List?
 
         public BooksManager()
         {

@@ -16,5 +16,9 @@ namespace Bibkioteka1
             nazwa = Nazwa;
             id = ID;
         }
+        public Books1() // konstruktor używany w klasie Loans, czy nie zepsuje opcji dodawania książek ??
+        {
+
+        }
     }
 }
