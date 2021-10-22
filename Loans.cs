@@ -27,17 +27,11 @@ namespace Bibkioteka1
             //var elementPos = array.map(function(x) { return x.id; }).indexOf(idYourAreLookingFor);
             //var objectFound = array[elementPos];
 
-            //foreach (Books1 book in _books1)
-            //{
-            //    if (_books1.
-            //}
-
-            for (BooksManager:BooksManager. _books1)
+            foreach (Books1 book in _books1)
             {
-                if
+                if (_books1.
             }
 
-            return borrowBook;
         }
     }
 }

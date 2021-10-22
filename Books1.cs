@@ -9,6 +9,7 @@ namespace Bibkioteka1
         public string autor { get; } // czy tutaj get ma jakieś logiczne zastosowanie ??
         public string nazwa;
         public int id;
+        public bool status = true; // true ponieważ, dopóki ktoś nie wypożyczy jest dostępna
 
         public Books1(string Autor, string Nazwa, int ID)
         {

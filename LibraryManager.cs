@@ -119,6 +119,7 @@ namespace Bibkioteka1
 
             //var check = _books1.Select(x => x.nazwa == a);
             Console.WriteLine(booksManager.GetBook1(a));
+            
         }
 
         private void AddUsser()

@@ -65,14 +65,18 @@ namespace Bibkioteka1
         public string GetBook1(string nameBook) // zwraca true jeśli nazwa książki jest na liście _books1
         {
             string a = "jest";
-            string b = "brak";
+            string b = "brak w zbiorze";
+            string c = "dostępna";
+            string d = "wypożyczona";
             foreach (Books1 nazwa in _books1)
             {
                 if (nazwa.nazwa == nameBook)
                 {
-                    return a;
-                }
+                    if (nazwa.status == true) //wyświetla dodatkowo status wypożyczenia
+                        return a +" " + c;
 
+                    else return a + " " + d;
+                }
             }
             return b;
         }
