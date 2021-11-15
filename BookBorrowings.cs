@@ -14,7 +14,7 @@ namespace Bibkioteka1
 
         public Books1 Book { get; set; }
 
-        public People People { get; set; }
+        public People Peoplee { get; set; }
 
 
     }
