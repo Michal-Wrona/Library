@@ -26,7 +26,7 @@ namespace Bibkioteka1
             int id = 1;
             if (_people.Any())
             {
-                id = _people.Max(n => n.id + 1);
+                id = _people.Max(n => Id + 1);
             }
             return id;
         }

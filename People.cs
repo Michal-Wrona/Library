@@ -6,17 +6,15 @@ namespace Bibkioteka1
 {
     class People
     {
-        public string firstName;
-        public string lastName;
-        public int pesel;
-        public int id;
+        public int Id { get; set; }
 
-        public People (string FirstName, string LastName, int Pesel, int ID)
-        {
-            firstName = FirstName;
-            lastName = LastName;
-            pesel = Pesel;
-            id = ID;
-        }
+        public string Name { get; set; }
+
+        public string Surname { get; set; }
+
+        public string MailAddress { get; set; }
+
+        public bool IsAccountLocked { get; set; }
+
     }
 }
