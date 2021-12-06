@@ -24,5 +24,9 @@ namespace Bibkioteka1
         {
             optionsBuilder.UseSqlServer(_connectionString);
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(System.Reflection.Assembly.GetExecutingAssembly());
+        }
     }
 }
